@@ -8,11 +8,6 @@ using namespace __gnu_pbds;
 #define     mp              make_pair
 #define     F               first
 #define     S               second
-#define     all(p)          p.begin(), p.end()
-#define     rep(i,a,b)      for( i=a;i<b;++i)
-#define     repr(i,a,b)     for( i=a;i>=b;i--)
-#define     up              upper_bound
-#define     lb              lower_bound
 #define     t()             int test;cin>>test;while(test--)
 #define     setbits(x)      __builtin_popcountll(x)
 #define     ii              pair<int,int>
@@ -21,23 +16,6 @@ using namespace __gnu_pbds;
 #define     endl            "\n"
 
 typedef tree<ii, null_type, less<ii>, rb_tree_tag, tree_order_statistics_node_update> pbds;
-
-#define TRACE
-#ifdef TRACE
-#define trace(...) __f(#__VA_ARGS__, __VA_ARGS__)
-template <typename Arg1>
-void __f(const char* name, Arg1&& arg1) {
-  cout << name << " : " << arg1 << endl;
-  //use cerr if u want to display at the bottom
-}
-template <typename Arg1, typename... Args>
-void __f(const char* names, Arg1&& arg1, Args&&... args) {
-  const char* comma = strchr(names + 1, ','); cout.write(names, comma - names) << " : " << arg1 << " | "; __f(comma + 1, args...);
-}
-#else
-#define trace(...)
-#endif
-
 
 int n, k, num, sum = 0;
 vector<int> track, cur;
@@ -108,14 +86,5 @@ int main()
     }
     cout << "sum:" << g->first << endl;
   }
-
-
-
-
-
-
-
-
-
 
 }
